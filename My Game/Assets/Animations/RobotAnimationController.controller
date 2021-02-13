@@ -9,6 +9,14 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: e3ce9218d72c10841bbd95cd901792d4, type: 3}
+    m_Threshold: -0.666666
+    m_Position: {x: 0, y: -1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: velocity
+    m_Mirror: 0
+  - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: f76369a9462327a4eb446ad259708577, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
@@ -17,9 +25,18 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
+    m_Motion: {fileID: -203655887218126122, guid: be0073a0ec4808d418135e67766846c4,
+      type: 3}
+    m_Threshold: 0
+    m_Position: {x: -1, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: velocity
+    m_Mirror: 0
+  - serializedVersion: 2
     m_Motion: {fileID: 7400002, guid: 6e2bfa8498b0db840865dd4eb42ce0ad, type: 3}
     m_Threshold: 0.333333
-    m_Position: {x: 0, y: 0.3}
+    m_Position: {x: 0, y: 0.5}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -27,26 +44,27 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400002, guid: cdcf0f712db52854aaa116824fd83296, type: 3}
     m_Threshold: 0.6666666
-    m_Position: {x: 0, y: 0.6}
+    m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400002, guid: 89b9b900b51d4df4cbe7f2a5373669ba, type: 3}
-    m_Threshold: 0.9999999
-    m_Position: {x: 0, y: 0.9}
+    m_Motion: {fileID: -203655887218126122, guid: 0c28d2844bbf6d647b2a76cf23b4e98a,
+      type: 3}
+    m_Threshold: 0
+    m_Position: {x: 1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: Blend
+    m_DirectBlendParameter: velocity
     m_Mirror: 0
-  m_BlendParameter: velocity
+  m_BlendParameter: velx
   m_BlendParameterY: vely
-  m_MinThreshold: 0
-  m_MaxThreshold: 0.9999999
+  m_MinThreshold: -0.666666
+  m_MaxThreshold: 0.6666666
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
-  m_BlendType: 0
+  m_BlendType: 2
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -56,7 +74,13 @@ AnimatorController:
   m_Name: RobotAnimationController
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: velocity
+  - m_Name: velx
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: vely
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0

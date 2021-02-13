@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerDetails : MonoBehaviour
 {
     public float currentSpeed;
-    private float delay = 1.0f;
     private Vector3 newPos, oldPos;
 
     void Start()
@@ -12,7 +11,7 @@ public class PlayerDetails : MonoBehaviour
         oldPos = transform.position;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         calculateVelocity();
     }
